@@ -165,7 +165,7 @@ private:
     void printTick() {
         for (long int y = topLeftCorner.Y(); y <= bottomRightCorner.Y(); ++y) {
             for (long int x = topLeftCorner.X(); x <= bottomRightCorner.X(); ++x) {
-                if (board.find(Point(x, y)) == board.end()) {
+                if (board.find(Point(x, y)) != board.end()) {
                     std::cout << defaultAliveChar;
                 } else {
                     std::cout << defaultDeadChar;
